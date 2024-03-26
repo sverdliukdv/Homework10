@@ -8,11 +8,52 @@ using System;
 
 namespace ConsoleApp2
 {
+    class Rectangle
+    {
+        private double side1;
+        private double side2;
+
+
+        public Rectangle(double side1, double side2)
+        {
+            this.side1 = side1;
+            this.side2 = side2;  
+        }
+        public double AreaCalculator()
+        {
+            return side1 * side2;
+        }
+
+        public double PerimeterCalculator()
+        {
+            return 2 * (side1 + side2);
+        }
+
+        public double  Area
+        {
+            get { return AreaCalculator(); }
+        }
+        public double Perimeter
+        {
+            get { return PerimeterCalculator(); }
+        }
+
+    }
+    
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Введіть довжину першої сторони прямокутника:");
+            double side1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введіть довжину першої сторони прямокутника:");
+            double side2 = Convert.ToDouble(Console.ReadLine());
+
+            Rectangle rect = new Rectangle(side1, side2);
+            Console.WriteLine($"Периметр прямокутника: {rect.Perimeter}");
+            Console.WriteLine($"Площа прямокутника: {rect.Area}");
+            Console.ReadLine();
         }
     }
 }
