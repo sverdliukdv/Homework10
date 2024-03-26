@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*Вивчіть основні конструкції та поняття, розглянуті на уроці.*/
+using System;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("+");
         }
     }
 }
